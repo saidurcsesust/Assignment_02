@@ -5,7 +5,10 @@
   <meta charset="UTF-8" />
   <title>OwnerDirect Header</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -69,31 +72,111 @@
 
 
         <div class="gallery">
-          <div class="gallery-main">
-            <img src="asset/image.png" alt="Main view">
-          </div>
+  <!-- Desktop / Tablet -->
+  <div class="gallery-desktop">
+    <div class="gallery-main">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    </div>
 
-          <div class="gallery-side">
-            <div class="side-img">
-              <img src="asset/room.jpeg" alt="Side image 1">
-            </div>
-            <div class="side-img">
-              <img src="asset/room.jpeg" alt="Side image 2">
-              <button class="view-btn">VIEW ALL 20 IMAGES</button>
-            </div>
-          </div>
-        </div>
+    <div class="gallery-side">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <div class="side-last">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+        <button class="view-btn" id="openModal">VIEW ALL IMAGES</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Slider -->
+  <div class="gallery-mobile">
+    <div class="slider" id="slider">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+
+
+    </div>
+
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <span class="close" id="closeModal">&times;</span>
+
+  <button class="nav-arrow left" id="prevBtn">&#10094;</button>
+
+  <div class="modal-slider" id="modalSlider">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+  </div>
+
+    <button class="nav-arrow right" id="nextBtn">&#10095;</button>
+
+    <div class="modal-dots" id="modalDots"></div>
+
+</div>
+
+<!-- <div class="modal" id="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <div class="modal-content">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    <img src="asset/image4.jpg">
+    <img src="asset/image5.jpg">
+    <img src="asset/image6.jpg">
+    <img src="asset/image7.jpg">
+    <img src="asset/image8.jpg">
+    <img src="asset/image9.jpg">
+    <img src="asset/image10.jpg">
+  </div>
+</div> -->
 
         <div class="description">
-          <h2>Beachfront Comfort with Breathtaking Gulf Views</h2>
-          <p>Welcome to Shoreline Towers 1021, a stunning Destin vacation rental that blends coastal charm with modern
-            comfort right onFlorida’s Emerald Coast. This 3-
-            <br>bedroom, 2-bath gulf-front condo sits just steps from the sand, offering guests the kind of relaxing,
-            effortless stay that makes Destin famous.
-          </p>
+          <div class="short-text">
+            <p>Welcome to Shoreline Towers 1021, a stunning Destin vacation rental that blends coastal charm with modern
+              comfort right on Florida’s Emerald Coast. This 3-bedroom, 2-bath gulf-front condo sits just steps from the
+              sand, offering guests the kind of relaxing, effortless stay that makes Destin famous.</p>
+
+          </div>
+
+          <div class="full-text">
+            <p>Welcome to Shoreline Towers 1021, a stunning Destin vacation rental that blends coastal charm with modern
+              comfort right on Florida’s Emerald Coast. This 3-bedroom, 2-bath gulf-front condo sits just steps from the
+              sand, offering guests the kind of relaxing, effortless stay that makes Destin famous.. Each of the three
+              bedrooms is designed with your comfort in mind, featuring plush bedding, ample storage, and soothing
+              coastal decor. The master suite includes a king-size bed, en-suite bathroom with a walk-in shower, and
+              direct balcony access to greet each morning with a stunning sunrise over the water.
+              The condo complex offers exceptional amenities including two beachfront swimming pools, a fully-equipped
+              fitness center, and private beach access with complimentary loungers. For families traveling with
+              children, the shallow, calm waters of the Gulf provide a safe environment for swimming and water play.
+              Whether you're planning a family vacation, a romantic getaway, or a friends' retreat, Shoreline Towers
+              1021 offers the perfect home base for creating unforgettable memories along Florida's beautiful Emerald
+              Coast.
+          </div>
+
+          <div class="show-more">
+            <h5>SHOW MORE</h5>
+          </div>
+
         </div>
-
-
 
         <div class="info-banner">
           <div class="icon">✓</div>
@@ -2986,214 +3069,162 @@
         </div>
 
 
+
+        <section class="rentals">
+          <h2>More Vacation Rentals in Destin</h2>
+
+          <div class="rentals-grid">
+
+            <!-- CARD 1 -->
+            <div class="card">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+                <div class="icons">
+                  <span>↗</span>
+                  <span>📍</span>
+                  <span class="heart" data-id="Luxury Pool Villa">♡</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="rating"><b>9.0</b> (3 Reviews) <span class="type">House</span></div>
+                <h3>Luxury Pool Villa</h3>
+                <p class="features">Air Conditioner • Balcony</p>
+                <p class="location">Lorem > Consemon</p>
+                <div class="footer">
+                  <span class="brand">Vrbo</span>
+                  <button>CHECK DATES</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+                <div class="icons">
+                  <span>↗</span>
+                  <span>📍</span>
+                  <span class="heart" data-id="Modern Beach House">♡</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="rating"><b>9.0</b> (3 Reviews) <span class="type">House</span></div>
+                <h3>Modern Beach House</h3>
+                <p class="features">Bedding • Balcony</p>
+                <p class="location">Lorem > Consemon</p>
+                <div class="footer">
+                  <span class="brand">Vrbo</span>
+                  <button>CHECK DATES</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811">
+                <div class="icons">
+                  <span>↗</span>
+                  <span>📍</span>
+                  <span class="heart" data-id="Private Luxury Resort">♡</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="rating"><b>9.0</b> (3 Reviews) <span class="type">House</span></div>
+                <h3>Private Luxury Resort</h3>
+                <p class="features">Air Conditioner • Pool</p>
+                <p class="location">Lorem > Consemon</p>
+                <div class="footer">
+                  <span class="brand">Vrbo</span>
+                  <button>CHECK DATES</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          
+        </section>
+
+
+
+
       </div>
 
       <!-- Second column start here -->
 
+      <div class="card">
+        <h2>USD $2026 <span>AVG PER NIGHT</span></h2>
 
-      <div class="booking-container">
-        <div class="booking-form">
-          <div class="price-info">
-            <div class="price-per-night">
-              <h2 for="price">USD $600 <sub>AVG PER NIGHT</sub></h2>
-            </div>
+        <div class="row">
+          <div class="field">
+            <label>CHECK-IN</label>
+            <input type="text" id="checkIn" placeholder="Select date">
+          </div>
+          <div class="field">
+            <label>CHECK-OUT</label>
+            <input type="text" id="checkOut" placeholder="Select date">
+          </div>
+        </div>
 
-            <div class="date-input">
-              <div class="dates">
-                <div class="inner-box">
-                  <h5>CHECK-IN</h5>
-                  <H4>19 FEB 2026</H4>
-                </div>
-                <div>
-                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div class="dates">
-                <div class="inner-box">
-                  <h5>CHECK-OUT</h5>
-                  <H4>19 FEB 2026</H4>
-                </div>
-                <div>
-                  <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
+        <div class="field full" id="guestField">
+          <label>GUESTS</label>
+          <input type="text" id="guestInput" readonly value="1 Guest">
+        </div>
 
-            <div class="guests">
-              <div class="inner-box">
-                <h5>GUESTS</h5>
-                <H4>3 Guests, 1 Infant, 1 Pet</H4>
-              </div>
-              <div>
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path d="M7 10L12 15L17 10" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round"></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
+        <div class="status">✔ Dates selected are available</div>
 
-            <div class="date-status">
-              <svg fill="#000000" width="20px" height="20px" viewBox="-17.28 -17.28 98.56 98.56" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                xmlns:serif="http://www.serif.com/"
-                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" stroke="#000000"
-                stroke-width="0.00064">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
-                  stroke-width="2.816">
-                  <rect id="Icons" x="-512" y="-64" width="1280" height="800" style="fill:none;"></rect>
-                  <g id="Icons1" serif:id="Icons">
-                    <g id="Strike"> </g>
-                    <g id="H1"> </g>
-                    <g id="H2"> </g>
-                    <g id="H3"> </g>
-                    <g id="list-ul"> </g>
-                    <g id="hamburger-1"> </g>
-                    <g id="hamburger-2"> </g>
-                    <g id="list-ol"> </g>
-                    <g id="list-task"> </g>
-                    <g id="trash"> </g>
-                    <g id="vertical-menu"> </g>
-                    <g id="horizontal-menu"> </g>
-                    <g id="sidebar-2"> </g>
-                    <g id="Pen"> </g>
-                    <g id="Pen1" serif:id="Pen"> </g>
-                    <g id="clock"> </g>
-                    <g id="external-link"> </g>
-                    <g id="hr"> </g>
-                    <path id="success"
-                      d="M56.103,16.824l-33.296,33.297l-14.781,-14.78l2.767,-2.767l11.952,11.952l30.53,-30.53c0.943,0.943 1.886,1.886 2.828,2.828Z"
-                      style="fill-rule:nonzero;"></path>
-                    <g id="info"> </g>
-                    <g id="warning"> </g>
-                    <g id="plus-circle"> </g>
-                    <g id="minus-circle"> </g>
-                    <g id="vue"> </g>
-                    <g id="cog"> </g>
-                    <g id="logo"> </g>
-                    <g id="radio-check"> </g>
-                    <g id="eye-slash"> </g>
-                    <g id="eye"> </g>
-                    <g id="toggle-off"> </g>
-                    <g id="shredder"> </g>
-                    <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g>
-                    <g id="react"> </g>
-                    <g id="check-selected"> </g>
-                    <g id="turn-off"> </g>
-                    <g id="code-block"> </g>
-                    <g id="user"> </g>
-                    <g id="coffee-bean"> </g>
-                    <g id="coffee-beans">
-                      <g id="coffee-bean1" serif:id="coffee-bean"> </g>
-                    </g>
-                    <g id="coffee-bean-filled"> </g>
-                    <g id="coffee-beans-filled">
-                      <g id="coffee-bean2" serif:id="coffee-bean"> </g>
-                    </g>
-                    <g id="clipboard"> </g>
-                    <g id="clipboard-paste"> </g>
-                    <g id="clipboard-copy"> </g>
-                    <g id="Layer1"> </g>
-                  </g>
-                </g>
-                <g id="SVGRepo_iconCarrier">
-                  <rect id="Icons" x="-512" y="-64" width="1280" height="800" style="fill:none;"></rect>
-                  <g id="Icons1" serif:id="Icons">
-                    <g id="Strike"> </g>
-                    <g id="H1"> </g>
-                    <g id="H2"> </g>
-                    <g id="H3"> </g>
-                    <g id="list-ul"> </g>
-                    <g id="hamburger-1"> </g>
-                    <g id="hamburger-2"> </g>
-                    <g id="list-ol"> </g>
-                    <g id="list-task"> </g>
-                    <g id="trash"> </g>
-                    <g id="vertical-menu"> </g>
-                    <g id="horizontal-menu"> </g>
-                    <g id="sidebar-2"> </g>
-                    <g id="Pen"> </g>
-                    <g id="Pen1" serif:id="Pen"> </g>
-                    <g id="clock"> </g>
-                    <g id="external-link"> </g>
-                    <g id="hr"> </g>
-                    <path id="success"
-                      d="M56.103,16.824l-33.296,33.297l-14.781,-14.78l2.767,-2.767l11.952,11.952l30.53,-30.53c0.943,0.943 1.886,1.886 2.828,2.828Z"
-                      style="fill-rule:nonzero;"></path>
-                    <g id="info"> </g>
-                    <g id="warning"> </g>
-                    <g id="plus-circle"> </g>
-                    <g id="minus-circle"> </g>
-                    <g id="vue"> </g>
-                    <g id="cog"> </g>
-                    <g id="logo"> </g>
-                    <g id="radio-check"> </g>
-                    <g id="eye-slash"> </g>
-                    <g id="eye"> </g>
-                    <g id="toggle-off"> </g>
-                    <g id="shredder"> </g>
-                    <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]"> </g>
-                    <g id="react"> </g>
-                    <g id="check-selected"> </g>
-                    <g id="turn-off"> </g>
-                    <g id="code-block"> </g>
-                    <g id="user"> </g>
-                    <g id="coffee-bean"> </g>
-                    <g id="coffee-beans">
-                      <g id="coffee-bean1" serif:id="coffee-bean"> </g>
-                    </g>
-                    <g id="coffee-bean-filled"> </g>
-                    <g id="coffee-beans-filled">
-                      <g id="coffee-bean2" serif:id="coffee-bean"> </g>
-                    </g>
-                    <g id="clipboard"> </g>
-                    <g id="clipboard-paste"> </g>
-                    <g id="clipboard-copy"> </g>
-                    <g id="Layer1"> </g>
-                  </g>
-                </g>
-              </svg>
-              <h5>Dates selected are available</h5>
-            </div>
+        <div class="price-box">
+          <div>
+            <span>PRICE PER NIGHT</span>
+            <span>USD $2026</span>
+          </div>
+          <div class="total">
+            <span>TOTAL PRICE</span>
+            <span id="totalPrice">USD $2026</span>
+          </div>
+        </div>
 
-            <div class="price">
-              <div class="price-per">
-                <h3>PRICE PER NIGHT</h3>
-                <H3>USD $600</H3>
-              </div>
-              <!-- <hr> -->
-              <div class="total-price">
-                <h3>TOTAL PRICE</h3>
-                <H3>USD $1,800</H3>
-              </div>
+        <button class="btn">CHECK AVAILABILITY</button>
+      </div>
+
+      <!-- Guests Modal -->
+      <div class="modal2" id="guestModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+
+          <div class="modal-row">
+            <span>Guests</span>
+            <div class="counter">
+              <button onclick="update('guest',-1)">−</button>
+              <span id="guestCount">1</span>
+              <button onclick="update('guest',1)">+</button>
             </div>
-            <div class="btn-check">
-              <h3>Check Availability</h3>
+          </div>
+
+          <div class="modal-row">
+            <span>Infants</span>
+            <div class="counter">
+              <button onclick="update('infant',-1)">−</button>
+              <span id="infantCount">0</span>
+              <button onclick="update('infant',1)">+</button>
             </div>
+          </div>
+
+          <div class="modal-row">
+            <span>Pets</span>
+            <div class="counter">
+              <button onclick="update('pet',-1)">−</button>
+              <span id="petCount">0</span>
+              <button onclick="update('pet',1)">+</button>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Flatpickr -->
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-
-      </div>
     </div>
 
 
